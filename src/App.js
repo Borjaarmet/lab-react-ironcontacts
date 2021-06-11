@@ -14,7 +14,6 @@ class ContactList extends Component {
 
   handleRandomContact = () => {
     console.log(this.state.contacts.length);
-    console.log(this.state.contacts.length);
     const newCopy = [...this.state.contacts];
     let randomIndex = Math.floor(Math.random() * contactsJSON.length);
     console.log(randomIndex);
@@ -119,7 +118,10 @@ class ContactList extends Component {
                   <h4 className="text-center font-bold">
                     Popularity:
                     <br />
-                    <span className="font-light "> {contact.popularity} </span>
+                    <span className="font-light ">
+                      {" "}
+                      {contact.popularity.toFixed(2)}{" "}
+                    </span>
                   </h4>
                   <div className=" mt-4 border-2 mr-4 ml-4 bg-gradient-to-r from-transparent via-gray-100 to-gray-300 shadow-2xl">
                     <button
